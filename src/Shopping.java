@@ -22,7 +22,7 @@ public class Shopping {
                 productManager.removeAllProducts();
             } else if (actionNumber == 5) {
                 productManager.exitProgram();
-                break;
+                return;
             } else {
                 System.out.println("Неизвестная команда!");
             }
