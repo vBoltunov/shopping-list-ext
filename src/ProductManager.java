@@ -28,7 +28,16 @@ public class ProductManager {
     }
 
     public int getActionNumber() {
-        return scanner.nextInt();
+        int number;
+        while (true) {
+            try {
+                number = Integer.parseInt(scanner.next());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Неверный ввод!\nПопробуйте ещё раз: ");
+            }
+        }
+        return number;
     }
 
     public void findProductsInArray(String productName) {
